@@ -8,3 +8,22 @@ function generateRandomNumber(num) {
     desserts: ['Shrikand', 'Baklava', 'Lime Cheesecake', 'Raspberry Brûlée', 'Bungeoppang', 'Churros', 'Sticky Toffee Pudding', 'Ice Cream Sunday', 'Eclairs', 'Beignet']
   }
   
+  let nextLunch = []
+
+  for(let item in options) {
+    let foodIdx = generateRandomNumber(options[item].length)
+  
+    switch(item) {
+      case 'starters':
+        nextLunch.push(`Your starter for today is ${options[item][foodIdx]}.`)
+        break
+      case 'mains':
+        nextLunch.push(`Your main for today is ${options[item][foodIdx]}.`)
+        break
+      case 'desserts':
+        nextLunch.push(`Your dessert for today is ${options[item][foodIdx]}.`)
+        break
+      default:
+        nextLunch.push('Error!')
+    }
+  }
