@@ -27,3 +27,11 @@ function generateRandomNumber(num) {
         nextLunch.push('Error!')
     }
   }
+
+  function tomorrowLunch(future) {
+
+    const display = nextLunch.join('\n')
+    console.log(display)
+  }
+  
+  tomorrowLunch(nextLunch);
